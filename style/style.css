@@ -722,6 +722,23 @@ section {
   align-items: center;
 }
 
+.mainBlog {
+  display: block;
+  padding: 4% 15%;
+  margin: auto;
+}
+.mainBlog .author, .mainBlog .date {
+  font-family: "Courier New", Courier, monospace;
+}
+.mainBlog img {
+  display: block;
+  margin: auto;
+  height: 300px;
+}
+.mainBlog .code {
+  font-family: "Courier New", Courier, monospace;
+}
+
 /* Independed components */
 .btn-con {
   display: flex;

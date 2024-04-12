@@ -712,6 +712,23 @@ section{
         }
     }
 }
+// blog page
+.mainBlog{
+    display: block;
+    padding:4% 15%;
+    margin: auto;
+    .author, .date{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    img{
+        display: block;
+        margin: auto;
+        height: 300px;
+    }
+    .code{
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
 
 /* Independed components */
 .btn-con{
