@@ -563,6 +563,7 @@ section {
   display: grid;
   border-radius: 7px;
   margin: 1rem;
+  padding: 2rem;
 }
 .blogs .blog, .games .blog {
   text-align: center;
@@ -617,7 +618,7 @@ section {
   overflow-x: scroll;
   overflow-y: hidden;
   margin: 1rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 .games .blog {
   width: 200px;
