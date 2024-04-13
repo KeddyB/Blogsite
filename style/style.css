@@ -726,6 +726,7 @@ section {
   display: block;
   padding: 4% 15%;
   margin: auto;
+  text-align: justify;
 }
 .mainBlog .author, .mainBlog .date {
   font-family: "Courier New", Courier, monospace;
