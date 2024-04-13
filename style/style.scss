@@ -826,7 +826,16 @@ footer{
 
 @media (max-width: 750px){
     .right-header{
-        padding-right: 1rem !important;
+        padding: 1rem !important;
+    }
+    // .left-header{
+    //     width: 40% !important;
+    // }
+    .h-shape{
+        width: 100% !important;
+    }
+    .header-content{
+        grid-template-columns: repeat(1, 1fr);
     }
     .blogs{
         display: grid;
@@ -843,8 +852,17 @@ footer{
     }
 }
 @media(max-width: 450px){
-    section{
-        padding: 0;
+    .right-header{
+        padding: 1rem !important;
+    }
+    // .left-header{
+    //     width: 40% !important;
+    // }
+    .h-shape{
+        width: 100% !important;
+    }
+    .header-content{
+        grid-template-columns: repeat(1, 1fr);
     }
     .controls{
         top: 79%;
