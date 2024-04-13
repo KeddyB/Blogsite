@@ -730,6 +730,9 @@ section {
 .mainBlog .author, .mainBlog .date {
   font-family: "Courier New", Courier, monospace;
 }
+.mainBlog h2 {
+  padding-top: 2rem;
+}
 .mainBlog img {
   display: block;
   margin: auto;
@@ -824,6 +827,12 @@ footer {
     grid-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
   }
+  .mainBlog {
+    padding: 3% 8%;
+  }
+  .mainBlog img {
+    height: 200px;
+  }
 }
 @media (min-width: 500px) and (max-width: 750px) {
   .blogs {
@@ -832,5 +841,11 @@ footer {
     grid-gap: 1.4rem;
     margin-top: 3rem;
     border-radius: 7px;
+  }
+  .mainBlog {
+    padding: 3% 8%;
+  }
+  .mainBlog img {
+    height: 200px;
   }
 }/*# sourceMappingURL=style.css.map */
