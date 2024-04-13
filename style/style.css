@@ -404,10 +404,11 @@ section {
   background-color: var(--color-grey-5);
 }
 .about-container .left-about p {
-  text-align: center;
+  text-align: center !important;
   line-height: 1.7rem;
   color: var(--color-grey-1);
   margin-bottom: 7%;
+  width: 100%;
 }
 .about-container .left-about h3 {
   font-size: 1.9em;
@@ -836,8 +837,24 @@ footer {
   }
 }
 @media (max-width: 750px) {
+  section {
+    padding: 2rem;
+  }
+  .sec2 h2 {
+    font-size: 40px;
+    padding: 1px;
+  }
+  .sec2 h3 {
+    text-align: center !important;
+    font-size: 30px;
+  }
+  .sec2 p {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: justify !important;
+  }
   .about {
-    text-align: justify;
+    text-align: justify !important;
   }
   .right-header {
     padding: 1rem !important;
@@ -871,6 +888,25 @@ footer {
   }
   .header-content {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .sec2 {
+    text-align: center !important;
+  }
+  .sec2 h2 {
+    font-size: 40px;
+    padding: 1px;
+  }
+  .sec2 h3 {
+    font-size: 20px !important;
+  }
+  .sec2 p {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: justify !important;
+    font-size: 14px;
+  }
+  .sec2 .timeline-item {
+    padding: 0;
   }
   .controls {
     top: 79%;
