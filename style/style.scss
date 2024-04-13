@@ -824,7 +824,7 @@ footer{
     }
 }
 
-@media (min-width: 500px) and (max-width: 750px){
+@media (max-width: 750px){
     .blogs{
         display: grid;
         grid-template-columns: repeat(1, 1fr) ;
