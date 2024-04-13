@@ -793,10 +793,10 @@ section{
     }
 }
 footer{
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    display: block;
+    margin: auto;
+    padding-top: 2rem;
 }
 @media(min-width: 1100px){
     .blogs{
@@ -874,16 +874,21 @@ footer{
     }
     .sec5{
         padding: 1rem;
-        margin: 1rem;
         overflow-y: scroll;
+        overflow-x: hidden;
         h2{
             font-size: 40px !important;
             padding: 0;
         }
     
         .contact-content-con{
+            display: grid;
             .left-contact{
-                flex: 1 !important;
+                
+            }
+            .right-contact{
+                margin-left: 0 !important;
+                
             }
         }
     }
