@@ -333,10 +333,10 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 11rem;
+  padding-right: 9rem;
 }
 .header-content .right-header .name {
-  font-size: 2.3em;
+  font-size: 2.3rem;
   margin-bottom: 15px;
 }
 .header-content .right-header .name span {
@@ -836,6 +836,9 @@ footer {
   }
 }
 @media (max-width: 750px) {
+  .right-header {
+    padding-right: 1rem !important;
+  }
   .blogs {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -851,6 +854,9 @@ footer {
   }
 }
 @media (max-width: 450px) {
+  section {
+    padding: 0;
+  }
   .controls {
     top: 79%;
   }
