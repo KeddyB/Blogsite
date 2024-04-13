@@ -830,6 +830,7 @@ footer{
         padding: 2rem;
     }
     .sec2{
+        overflow-x: hidden;
         h2{
             font-size: 40px;
             padding: 1px;
@@ -871,6 +872,21 @@ footer{
             height: 200px;
         }
     }
+    .sec5{
+        padding: 1rem;
+        margin: 1rem;
+        overflow-y: scroll;
+        h2{
+            font-size: 40px !important;
+            padding: 0;
+        }
+    
+        .contact-content-con{
+            .left-contact{
+                flex: 1 !important;
+            }
+        }
+    }
 }
 @media(max-width: 450px){
     .right-header{
@@ -909,7 +925,7 @@ footer{
             grid-template-columns: repeat(1, 1fr) ;
         }
     }
-    .sec4{
+    .sec4{overflow-x: hidden;
         padding: 1rem ;
         h2{
             font-size: 40px;
@@ -920,7 +936,9 @@ footer{
             padding-top: 2rem;
         }
     }
-    
+    .sec5{
+        
+    }
     .controls{
         top: 79%;
         .control{
