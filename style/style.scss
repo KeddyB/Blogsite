@@ -879,6 +879,7 @@ footer{
     // .left-header{
     //     width: 40% !important;
     // }
+
     .h-shape{
         width: 100% !important;
     }
@@ -902,7 +903,21 @@ footer{
             font-size: 14px;
         }
         .timeline-item{
+            padding: 1rem;
+        }
+        .right-about{
+            grid-template-columns: repeat(1, 1fr) ;
+        }
+    }
+    .sec4{
+        padding: 1rem ;
+        h2{
+            font-size: 40px;
+        }
+        .games{
             padding: 0;
+            margin: 0;
+            padding-top: 2rem;
         }
     }
     

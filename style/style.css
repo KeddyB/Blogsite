@@ -906,7 +906,21 @@ footer {
     font-size: 14px;
   }
   .sec2 .timeline-item {
+    padding: 1rem;
+  }
+  .sec2 .right-about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .sec4 {
+    padding: 1rem;
+  }
+  .sec4 h2 {
+    font-size: 40px;
+  }
+  .sec4 .games {
     padding: 0;
+    margin: 0;
+    padding-top: 2rem;
   }
   .controls {
     top: 79%;
