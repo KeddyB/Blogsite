@@ -825,14 +825,16 @@ footer{
 }
 
 @media (max-width: 750px){
+    .about{
+        text-align: justify;
+    }
     .right-header{
         padding: 1rem !important;
+
     }
-    // .left-header{
-    //     width: 40% !important;
-    // }
-    .h-shape{
-        width: 100% !important;
+    .left-header{
+        height: 250px !important;
+        
     }
     .header-content{
         grid-template-columns: repeat(1, 1fr);
