@@ -851,13 +851,16 @@ footer {
   }
 }
 @media (max-width: 450px) {
+  .controls {
+    top: 79%;
+  }
   .controls .control {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
   }
   .controls .control:hover {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
   .controls i {
     font-size: 0.6rem;

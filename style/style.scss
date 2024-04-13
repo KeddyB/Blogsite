@@ -841,12 +841,13 @@ footer{
 }
 @media(max-width: 450px){
     .controls{
+        top: 79%;
         .control{
-            height: 35px;
-            width: 35px;
+            height: 40px;
+            width: 40px;
             &:hover{
-                width: 40px;
-                height: 40px;
+                width: 45px;
+                height: 45px;
             }
         }
         i{
