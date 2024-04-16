@@ -63,3 +63,39 @@ fetch(URL)
 // }
 
 // document.querySelector(".year").innerHTML =`${getCurrentYear()}`
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if a theme preference is stored in localStorage
+    var savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+    }
+});
+
+// Select the theme toggle button
+const themeBtn = document.querySelector('.theme-btn');
+
+// Function to apply the theme from local storage
+function applyTheme() {
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme === "light-mode") {
+        document.body.classList.add("light-mode");
+    } else {
+        document.body.classList.remove("light-mode");
+    }
+}
+
+// Add an event listener to the theme button
+themeBtn.addEventListener('click', () => {
+    // Toggle the light-mode class on the body
+    document.body.classList.toggle('light-mode');
+
+    // Determine the current theme
+    const currentTheme = document.body.classList.contains("light-mode") ? "light-mode" : "dark-mode";
+
+    // Save the current theme to local storage
+    localStorage.setItem("theme", currentTheme);
+});
+
+// Apply the theme from local storage when the page loads
+applyTheme();
