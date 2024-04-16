@@ -745,6 +745,16 @@ section {
   font-family: "Courier New", Courier, monospace;
 }
 
+.idiv {
+  padding: 1rem;
+}
+.idiv i {
+  font-size: 25px;
+  color: green;
+  display: block;
+  margin: auto;
+}
+
 /* Independed components */
 .btn-con {
   display: flex;

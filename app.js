@@ -62,6 +62,7 @@ let checkCookie = document.cookie.indexOf("CookieBy=Keddy");
 checkCookie!=-1?cookieBox.classList.add('hide'): cookieBox.classList.remove('hide')
 
 //backend api request
+//for the blog
 let PROJECT_ID = "6kl7o5z0"
 let DATASET_NAME = "production"
 let QUERY = encodeURIComponent(`*[_type == "post" && categories[0]._ref == "e1e8887c-e07a-4b6c-948d-179777671e00"] | order(_createdAt desc){
@@ -94,12 +95,14 @@ fetch(URL)
                 let img = document.createElement('img')
                 let blogText = document.createElement("div")
                 let blogContainer = document.createElement("div")
+    
                 img.src = imgUrl
                 h4.innerHTML = `${blog.title}`
                 blogText.appendChild(h4)
                 blogText.classList.add("blog-text")
                 blogContainer.appendChild(img)
                 blogContainer.appendChild(blogText)
+                
                 blogContainer.classList.add("blog")
                 a.appendChild(blogContainer)
                 blogs.appendChild(a)
@@ -108,6 +111,7 @@ fetch(URL)
         }
     })
 
+//for the games
 let gameQUERY = encodeURIComponent(`*[_type == "post" && categories[0]._ref == "79aaa963-fe61-4d42-935a-ebecafb4a46c"] | order(_createdAt desc){
   title,
   author->{
@@ -138,13 +142,21 @@ fetch(gameURL)
                 let img = document.createElement('img')
                 let blogText = document.createElement("div")
                 let blogContainer = document.createElement("div")
+                let iDiv = document.createElement("div")
+                iDiv.classList.add("idiv")
                 img.src = imgUrl
+                let i = document.createElement('i')
+                i.classList.add('fa-solid')
+                i.classList.add('fa-play')
+                iDiv.appendChild(i)
+                
                 h4.innerHTML = `${blog.title}`
                 blogText.appendChild(h4)
                 blogText.classList.add("blog-text")
                 blogContainer.appendChild(img)
                 blogContainer.appendChild(blogText)
                 blogContainer.classList.add("blog")
+                blogContainer.appendChild(iDiv)
                 a.appendChild(blogContainer)
                 blogs.appendChild(a)
 
