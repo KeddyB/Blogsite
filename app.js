@@ -1,66 +1,3 @@
-const sections = document.querySelectorAll('.section')
-const sectBtns = document.querySelectorAll('.controls')
-const sectBtn = document.querySelectorAll('.control')
-const allSections = document.querySelector('.main-content')
-
-function pageTransition(){
-    for(let i = 0; i < sectBtn.length; i++){
-        sectBtn[i].addEventListener('click', function(){
-            let currentButton = document.querySelectorAll('.active-btn')
-            currentButton[0].className = currentButton[0].className.replace('active-btn', '')
-            this.className += ' active-btn'
-        })
-    }
-    //sections active class
-    allSections.addEventListener('click', pageT)
-}
-function pageT(e){
-     const id = e.target.dataset.id;
-     if(id){
-        sectBtns.forEach((btn)=>{
-            btn.classList.remove('active')
-        })
-        e.target.classList.add('active')
-        sections.forEach((section)=>{
-            section.classList.remove('active')
-        })
-        const element = document.getElementById(id)
-        element.classList.add('active');
-    }
-}
-//toggle theme
-document.addEventListener("DOMContentLoaded", function() {
-    // Check if a theme preference is stored in localStorage
-    var savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        document.body.classList.add(savedTheme);
-    }
-});
-
-const themeBtn = document.querySelector('.theme-btn')
-themeBtn.addEventListener('click', ()=>{
-    let element = document.body
-    element.classList.toggle('light-mode')
-
-    var currentTheme = body.classList.contains("light-mode") ? "light-mode" : ":root";
-    localStorage.setItem("theme", currentTheme);
-})
-pageTransition()
-
-const cookieBox = document.querySelector(".wrapper");
-acceptBtn = cookieBox.querySelector('.buttons button')
-
-acceptBtn.onclick = ()=>{
-    document.cookie = "CookieBy=Keddy; max-age="+60*60*24*30
-    if(document.cookie){
-        cookieBox.classList.add('hide')
-    }else{
-        alert("cookie cannot be set")
-    }
-}
-let checkCookie = document.cookie.indexOf("CookieBy=Keddy");
-checkCookie!=-1?cookieBox.classList.add('hide'): cookieBox.classList.remove('hide')
-
 //backend api request
 //for the blog
 let PROJECT_ID = "6kl7o5z0"
@@ -163,3 +100,148 @@ fetch(gameURL)
             })
         }
     })
+//cookie    
+const cookieBox = document.querySelector(".wrapper");
+acceptBtn = cookieBox.querySelector('.buttons button')
+
+acceptBtn.onclick = ()=>{
+    document.cookie = "CookieBy=Keddy; max-age="+60*60*24*30
+    if(document.cookie){
+        cookieBox.classList.add('hide')
+    }else{
+        alert("cookie cannot be set")
+    }
+}
+let checkCookie = document.cookie.indexOf("CookieBy=Keddy");
+checkCookie!=-1?cookieBox.classList.add('hide'): cookieBox.classList.remove('hide')
+//scrolling
+const sections = document.querySelectorAll('.section')
+const sectBtns = document.querySelectorAll('.controls')
+const sectBtn = document.querySelectorAll('.control')
+const allSections = document.querySelector('.main-content')
+
+function pageTransition(){
+    for(let i = 0; i < sectBtn.length; i++){
+        sectBtn[i].addEventListener('click', function(){
+            let currentButton = document.querySelectorAll('.active-btn')
+            currentButton[0].className = currentButton[0].className.replace('active-btn', '')
+            this.className += ' active-btn'
+        })
+    }
+    //sections active class
+    allSections.addEventListener('click', pageT)
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.section');
+    const sectBtns = document.querySelectorAll('.control');
+    
+    // Function to handle smooth scrolling and active state
+    function navigateToSection(target) {
+        const id = target.dataset.id;
+        if (id) {
+            // Remove active class from all buttons
+            sectBtns.forEach(btn => {
+                btn.classList.remove('active-btn');
+            });
+            // Add active class to the clicked button
+            target.classList.add('active-btn');
+            
+            // Remove active class from all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // Add active class to the target section
+            const element = document.getElementById(id);
+            element.classList.add('active');
+            
+            // Scroll smoothly to the target section
+            element.scrollIntoView({ behavior: 'smooth' });
+            
+            // Update the URL hash
+            window.history.pushState(null, null, '#' + id);
+        }
+    }
+    
+    // Event listener for control buttons
+    sectBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            navigateToSection(this);
+        });
+    });
+    
+    // Handle page load and hash change events
+    function handleHashChange() {
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                // Add active class to the corresponding button
+                sectBtns.forEach(btn => {
+                    btn.classList.remove('active-btn');
+                    if (btn.dataset.id === hash.substring(1)) {
+                        btn.classList.add('active-btn');
+                    }
+                });
+                
+                // Add active class to the corresponding section
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === hash.substring(1)) {
+                        section.classList.add('active');
+                    }
+                });
+                
+                // Scroll smoothly to the target section
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+    
+    // Handle initial page load
+    handleHashChange();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+});
+
+
+//toggle theme
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if a theme preference is stored in localStorage
+    var savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+    }
+});
+
+// Select the theme toggle button
+const themeBtn = document.querySelector('.theme-btn');
+
+// Function to apply the theme from local storage
+function applyTheme() {
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme === "light-mode") {
+        document.body.classList.add("light-mode");
+    } else {
+        document.body.classList.remove("light-mode");
+    }
+}
+
+// Add an event listener to the theme button
+themeBtn.addEventListener('click', () => {
+    // Toggle the light-mode class on the body
+    document.body.classList.toggle('light-mode');
+    
+    // Determine the current theme
+    const currentTheme = document.body.classList.contains("light-mode") ? "light-mode" : "dark-mode";
+    
+    // Save the current theme to local storage
+    localStorage.setItem("theme", currentTheme);
+});
+
+// Apply the theme from local storage when the page loads
+applyTheme();
+
+pageTransition()
