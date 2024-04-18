@@ -734,7 +734,7 @@ section{
     img{
         display: block;
         margin: auto;
-        height: 300px;
+        height: 470px;
         padding: 1rem;
     }
     .code{
@@ -838,7 +838,7 @@ footer{
     .mainBlog{
         padding:3% 8%;
         img{
-            height: 200px;
+            height: 350px;
         }
     }
 }
@@ -887,7 +887,7 @@ footer{
     .mainBlog{
         padding:3% 8%;
         img{
-            height: 200px;
+            height: 300px;
         }
     }
     .sec5{
@@ -987,6 +987,11 @@ footer{
             transform:translateY(-5px);
             width: 37px;
             height: 37px;
+        }
+    }
+    .mainBlog{
+        img{
+            height: 200px;
         }
     }
 }

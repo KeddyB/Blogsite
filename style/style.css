@@ -742,7 +742,7 @@ section {
 .mainBlog img {
   display: block;
   margin: auto;
-  height: 300px;
+  height: 470px;
   padding: 1rem;
 }
 .mainBlog .code {
@@ -848,7 +848,7 @@ footer {
     padding: 3% 8%;
   }
   .mainBlog img {
-    height: 200px;
+    height: 350px;
   }
 }
 @media (max-width: 750px) {
@@ -894,7 +894,7 @@ footer {
     padding: 3% 8%;
   }
   .mainBlog img {
-    height: 200px;
+    height: 300px;
   }
   .sec5 {
     padding: 1rem;
@@ -981,5 +981,8 @@ footer {
     transform: translateY(-5px);
     width: 37px;
     height: 37px;
+  }
+  .mainBlog img {
+    height: 200px;
   }
 }/*# sourceMappingURL=style.css.map */
