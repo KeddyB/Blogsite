@@ -420,6 +420,13 @@ section {
   text-align: center;
 }
 
+.aboutImg {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
 .right-bottom {
   grid-gap: 2rem;
   padding: 10%;

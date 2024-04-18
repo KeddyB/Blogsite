@@ -402,7 +402,12 @@ section{
         }
     }
 }
-
+.aboutImg{
+        width: 150px;
+        border-radius: 50%;
+        display: block;
+        margin: auto;
+    }
 .right-bottom{
     grid-gap: 2rem;
     padding: 10%;
@@ -553,6 +558,7 @@ section{
             color: var(--color-grey-2);
         }
     }
+    
 }
 
 //Blogs
