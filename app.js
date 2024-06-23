@@ -44,8 +44,6 @@ fetch(homeURL)
                 a.appendChild(homeImg)
                 a.appendChild(contain)
 
-                homeCont.appendChild(a)
-                console.log(result.mainImage.asset.url)
             
     })
     

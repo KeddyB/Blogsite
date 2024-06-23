@@ -317,6 +317,7 @@ section {
 
 .news-grid {
   grid-gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .newsContainer {
