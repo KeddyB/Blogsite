@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keddy's Portfolio & Blog</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="shortcut icon" type="image" href="download.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="thumbnail.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5eb97336bc.js" crossorigin="anonymous"></script>
@@ -18,27 +21,26 @@
 </head>
 <body class="main-content">
     <header class="section sec1 header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape">
-                    <div class="grid">
-                        <img class ="img1" src="prof.jpg" alt="">
-                    </div>
+        <div class="headCont">
+            <h1 class="keddy">KEDDY TECH NEWS</h1>
+        </div>
+        <!-- New homepage design -->
+        <div class="latest-news">
+            <h2 class="tech">Top Tech News</h2>
+            <div class="news-grid">
+                <div class="leftNews">
+
                 </div>
-            </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span>OKEDUSI&nbsp;BUSAYO. </span>
-                    A web developer.
-                </h1>
-                <p class="about">
-                  I am a student of the Federal University of technology Akure (<a href="https://www.futa.edu.ng">FUTA</a>).
-                    Check out other pages to learn more about me and my blog section. The blog page also contains PC based games.
-                </p>
                 
+                <!-- other news -->
+                <div class="otherNews">
+            
                 </div>
             </div>
         </div>
+        <a href="#blogs">
+            <button class="btnhead">Read More News</button>
+        </a>
     </header>
     <main>
         <section class="section sec2 about" id="about">
@@ -98,13 +100,13 @@
                             <p class="small-text">FRAMEWORK <br>DEVELOPER</p>
                         </div>
                     </div>
-<div class="about-item">
+                    <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">REACT NATIVE</p>
                             <p class="small-text">FRAMEWORK <br>DEVELOPER</p>
                         </div>
                 </div> 
-            </div>   
+            </div>  
             <div class="right-bottom">
                 <div class="about-stats">
                     <h2 class="stat-title">MY skills</h2>
@@ -234,15 +236,12 @@
                     
                 </div>    
         </section>
-        <section class="section sec4" id="blogs">
+        <section class="section sec4 blog" id="blogs">
             <div class="blogs-content">
                 <div class="main-title">
                     <h2>My <span>Blogging Portfolio</span> <span class="bg-text">My portfolio</span></h2>
                 </div>
-                <h3>Web Games</h3>
-                <div class="games">
-                    
-                </div>
+                
                 <h3>Blog Posts</h3>
                 <div class="blogs">
                     
@@ -250,7 +249,19 @@
             </div>
             
         </section>
-        <section class="section sec5 contact" id="contact">
+        <section class="section sec5 game" id="games">
+            <div class="">
+                <div class="main-title">
+                    <h2><span>Games</span> <span class="bg-text">Games</span></h2>
+                </div>
+                
+                <h3>Web Games</h3>
+                <div class="games">
+                    
+                </div>
+            </div>   
+        </section>
+        <section class="section sec6 contact" id="contact">
             <div class="contact-con">
                 <div class="main-title">
                     <h2>Contact <span>Me</span> <span class="bg-text">My Contacts </span> </h2>
@@ -345,29 +356,34 @@
     </main>
     <div class="controls">
         <a href="#home">
-            <div class="control control-1 active-btn" data-id="home">
+            <div title="Homepage" class="control control-1 active-btn" data-id="home">
                 <i class="fas fa-home"></i>
             </div>
         </a>
         <a href="#about">
-            <div class="control control-2" data-id="about">
+            <div title="About" class="control control-2" data-id="about">
                 <i class="fas fa-user"></i>
             </div>
         </a>
 
         <a href="#blogs">
-            <div class="control control-4" data-id="blogs">
+            <div title="Blog" class="control control-4" data-id="blogs">
                 <i class="fas fa-newspaper"></i>
             </div>
         </a>
+        <a href="#games">
+            <div title="Games" class="control control-5" data-id="games">
+                <i class="fas fa-gamepad"></i>
+            </div>
+        </a>
         <a href="#contact">
-            <div class="control control-5" data-id="contact">
+            <div title="Contact Us" class="control control-6" data-id="contact">
                 <i class="fas fa-envelope-open"></i>
             </div>
         </a>  
     </div>
     
-    <div class="theme-btn">
+    <div title="Change Theme" class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
     <div class="wrapper">
