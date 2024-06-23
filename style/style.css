@@ -744,10 +744,8 @@ section {
 .mainBlog h2 {
   padding-top: 2rem;
 }
-.mainBlog img {
-  display: block;
-  margin: auto;
-  height: 470px;
+.mainBlog .postImage {
+  width: 100%;
   padding: 1rem;
 }
 .mainBlog .code {

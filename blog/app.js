@@ -39,7 +39,6 @@ let URL = `https://${PROJECT_ID}.api.sanity.io/v2022-03-07/data/query/${DATASET_
 fetch(URL)
   .then(response => response.json())
   .then(data => {
-    console.log(data)
     // Extract the blog post from the data
     const blogPost = data.result[0];
     // Populate the template with the fetched content
