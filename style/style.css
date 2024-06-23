@@ -192,6 +192,7 @@ section {
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
+  overflow-x: hidden;
 }
 
 .sec6 {

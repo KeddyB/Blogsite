@@ -169,6 +169,7 @@ section{
 .sec5{
     display:none;
     transform: translateY(0) scale(1);
+    overflow-x: hidden;
 }
 .sec6{
     display:none;
@@ -995,9 +996,7 @@ footer{
             padding-top: 2rem;
         }
     }
-    .sec5{
-        
-    }
+    
     .controls{
         top: 79%;
         .control{
