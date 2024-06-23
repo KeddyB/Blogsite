@@ -317,7 +317,7 @@ section {
 
 .news-grid {
   grid-gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2;
 }
 
 .newsContainer {
@@ -623,7 +623,6 @@ section {
 
 .games {
   grid-template-columns: repeat(2, 1fr);
-  overflow-x: scroll;
   overflow-y: hidden;
   margin: auto;
   padding: 1rem;

@@ -44,6 +44,7 @@ fetch(homeURL)
                 a.appendChild(homeImg)
                 a.appendChild(contain)
 
+                homeCont.appendChild(a)
             
     })
     
