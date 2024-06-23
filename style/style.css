@@ -624,6 +624,7 @@ section {
 .games {
   grid-template-columns: repeat(2, 1fr);
   overflow-y: hidden;
+  overflow-x: hidden;
   margin: auto;
   padding: 1rem;
   grid-gap: 2rem;

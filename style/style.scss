@@ -605,6 +605,7 @@ section{
 .games{
     grid-template-columns: repeat(2, 1fr);
     overflow-y: hidden;
+    overflow-x: hidden;
     margin: auto;
     padding: 1rem;
     grid-gap: 2rem;
@@ -982,7 +983,8 @@ footer{
             grid-template-columns: repeat(1, 1fr) ;
         }
     }
-    .sec4{overflow-x: hidden;
+    .sec4{
+        overflow-x: hidden;
         padding: 1rem ;
         h2{
             font-size: 40px;
